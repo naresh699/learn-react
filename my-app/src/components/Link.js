@@ -1,9 +1,9 @@
-import React from "react"
-import clsx from 'clsx'
+import React from "react";
+import clsx from "clsx"
 
 export default function Link(props) {
     const {children, className, ...rest} = props;
-    const classes = clsx("ui-link", className)
+    const classes = clsx (className, 'ui-link')
 
     return <a className={classes} {...rest}>{children}</a>;
 }

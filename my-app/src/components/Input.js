@@ -1,10 +1,9 @@
 // Input.js
 import React from "react";
+import clsx from "clsx"
 
 export default function Input(props) {
-    let type = props.type;
-    if (!type){
-        type = "text";
-    }
-    return <input className="ui-textfield" type={type} placeholder={props.placeholder} name={props.name} />;
+const {className, type='text', ...rest} = props
+const classes = clsx(className, 'ui-textfield')
+return <input className={classes} type={type} {...rest} />;
 }
